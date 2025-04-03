@@ -1,0 +1,201 @@
+# Harshika Agrawal, IT202 & 004, Internet Applications, Phase 2, ha542@njit.edu
+
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=101
+&productCode=MONO
+&productName=Monopoly Classic Board Game
+&description=Monopoly is a classic board game where players buy, sell, and trade properties. It is a fun, competitive game for friends and family.
+&model=Monopoly Classic
+&categoryID=100
+&wholeSalePrice=10.00
+&listPrice=19.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=102
+&productCode=CATAN
+&productName=Catan - Trade Build Settle
+&description=Catan is a strategic game of resource management and settlement building. Players compete to build settlements and cities on the island of Catan.
+&model=Catan Classic
+&categoryID=100
+&wholeSalePrice=25.00
+&listPrice=49.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=103
+&productCode=SCRAB
+&productName=Scrabble Classic Game
+&description=Scrabble is a word game where players create words from letter tiles. It is an educational game that is also fun for the entire family.
+&model=Scrabble Classic
+&categoryID=100
+&wholeSalePrice=9.50
+&listPrice=19.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=201
+&productCode=NQD
+&productName=NQD Remote Control Formula 1 Racing Car
+&description=The NQD F1 Racing Car features a sleek design and high-speed racing capabilities. It is perfect for enthusiasts of remote control racing cars.
+&model=NQD Formula 1
+&categoryID=200
+&wholeSalePrice=35.00
+&listPrice=69.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=202
+&productCode=TERRA
+&productName=TerraFury RC Car (F1 Style)
+&description=The TerraFury RC car combines high-speed performance with off-road durability. It mimics the sleek design of an F1 car for thrilling races.
+&model=F1 TerraFury
+&categoryID=200
+&wholeSalePrice=45.00
+&listPrice=89.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=203
+&productCode=RAZOR
+&productName=Razor Ground Force Drifter Electric F1 Go-Kart
+&description=The Razor Ground Force Drifter is an electric go-kart designed for drifting. It combines F1 aesthetics and performance for fun and exciting rides.
+&model=Razor Drifter
+&categoryID=200
+&wholeSalePrice=200.00
+&listPrice=399.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=301
+&productCode=BARBIE
+&productName=Barbie Dreamhouse Dollhouse
+&description=The Barbie Dreamhouse has three floors with seven rooms and accessories. It encourages imaginative storytelling with Barbie and friends.
+&model=Dreamhouse
+&categoryID=300
+&wholeSalePrice=85.00
+&listPrice=179.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=302
+&productCode=PINKMAN
+&productName=KidKraft Wooden Pink Mansion Dollhouse
+&description=The KidKraft Pink Mansion Dollhouse features 3 floors with elegant furniture. It is ideal for fostering creative play and storytelling.
+&model=Pink Mansion
+&categoryID=300
+&wholeSalePrice=115.00
+&listPrice=229.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=303
+&productCode=MELVIC
+&productName=Melissa & Doug Wooden Victorian Dollhouse
+&description=The Melissa & Doug Victorian Wooden Dollhouse is crafted from wood and includes 11 pieces of furniture. It is perfect for hours of imaginative play.
+&model=Victorian Dollhouse
+&categoryID=300
+&wholeSalePrice=95.00
+&listPrice=159.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=401
+&productCode=LEGOWAR
+&productName=LEGO Star Wars Millennium Falcon
+&description=This LEGO Star Wars Millennium Falcon set lets you build the iconic ship. It is perfect for fans and collectors alike.
+&model=Millennium Falcon
+&categoryID=400
+&wholeSalePrice=150.00
+&listPrice=199.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=402
+&productCode=LEGOCOAST
+&productName=LEGO Creator Expert Roller Coaster
+&description=Build a fully functional roller coaster with this LEGO set. It includes a lift and track for realistic fun.
+&model=Roller Coaster
+&categoryID=400
+&wholeSalePrice=280.00
+&listPrice=379.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=403
+&productCode=LEGOFRIEN
+&productName=LEGO Friends Central Perk Set
+&description=Recreate Central Perk café from Friends with this LEGO set. It features mini-figures and a detailed café interior.
+&model=Central Perk
+&categoryID=400
+&wholeSalePrice=55.00
+&listPrice=89.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=501
+&productCode=RUBIK
+&productName=Rubik’s Cube
+&description=This 3x3 Rubik’s Cube is a classic puzzle. It has smooth rotation and vibrant colors, perfect for puzzle lovers.
+&model=Speed 3x3 Cube
+&categoryID=500
+&wholeSalePrice=6.00
+&listPrice=12.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+
+PlayboxProductID=502
+&productCode=RAVENS
+&productName=Ravensburger 1000-Piece Puzzle
+&description=This Ravensburger 1000-piece puzzle features beautiful imagery. It Is a challenging puzzle for all skill levels.
+&model=1000-Piece Puzzle
+&categoryID=500
+&wholeSalePrice=10.00
+&listPrice=19.99
+###
+POST http://localhost:3000/addplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=503
+&productCode=3DPUZ
+&productName=3D Puzzle - Eiffel Tower
+&description=Build a detailed 3D replica of the Eiffel Tower with this challenging puzzle. It is perfect for collectors and puzzle fans.
+&model=Eiffel Tower 3D
+&categoryID=500
+&wholeSalePrice=15.00
+&listPrice=25.99
+###
+GET http://localhost:3000/listplayboxproducts.test.php
+###
+POST http://localhost:3000/changeplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=102
+&productCode=CATANX
+&productName=Catan Extension
+&description=Elevate your CATAN gameplay by accommodating up to 6 players for epic battles on the bountiful island. Introduce eleven unique territory tiles to make room for new civilizations and expand your CATAN universe.
+&model=Monopoly Extension
+&categoryID=100
+&wholeSalePrice=49.99
+&listPrice=59.99
+###
+POST http://localhost:3000/removeplayboxproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxProductID=101

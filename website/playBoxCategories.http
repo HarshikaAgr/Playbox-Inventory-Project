@@ -1,0 +1,55 @@
+
+POST http://localhost:3000/addplayboxcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxCategoryID=100
+&categoryCode=BDG
+&categoryName=Board Games
+&categoryShelfNumber=1
+###
+POST http://localhost:3000/addplayboxcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxCategoryID=200
+&categoryCode=RCC
+&categoryName=Remote Control Car
+&categoryShelfNumber=2
+###
+POST http://localhost:3000/addplayboxcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxCategoryID=300
+&categoryCode=DOLL
+&categoryName=Dollhouse
+&categoryShelfNumber=3
+###
+POST http://localhost:3000/addplayboxcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxCategoryID=400
+&categoryCode=LEGO
+&categoryName=Lego Set
+&categoryShelfNumber=4
+###
+POST http://localhost:3000/addplayboxcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxCategoryID=500
+&categoryCode=PUZZ
+&categoryName=Puzzle
+&categoryShelfNumber=5
+###
+GET http://localhost:3000/listplayboxcategories.test.php
+###
+POST http://localhost:3000/changeplayboxcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxCategoryID=100
+&categoryCode=MBG
+&categoryName=Multiplayer Board Games
+&categoryShelfNumber=1
+###
+POST http://localhost:3000/removeplayboxcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+PlayboxCategoryID=100

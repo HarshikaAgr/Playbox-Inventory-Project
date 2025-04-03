@@ -1,8 +1,9 @@
-
-<!-- HARSHIKA AGRAWAL
-28 FEB 2025
-IT202 - 004
-PHASE 1: LOGIN AND LOGOUT -->
+<?php
+// HARSHIKA AGRAWAL
+// 28 FEB 2025
+// IT202 - 004
+// PHASE 1: LOGIN AND LOGOUT 
+?>
 
 <?php
  function getDB() {
