@@ -30,7 +30,7 @@ class Product
 
    function __toString()
    {
-       $output = "<h2>Item : $this->productID</h2>" .
+       $output = "<h2>product : $this->productID</h2>" .
            "<h2>Name: $this->productName</h2>\n";
        "<h2>Category ID: $this->categoryID at $this->listPrice</h2>\n";
        return $output;
@@ -158,6 +158,35 @@ class Product
         $db->close(); 
         return $result;
     }
+
+    static function getproductsByCategory($categoryID)
+   {
+       $db = getDB();
+       $query = "SELECT * from PlayboxProducts where PlayboxCategoryID = $categoryID";
+       $result = $db->query($query);
+       if (mysqli_num_rows($result) > 0) {
+           $products = array();
+           while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+                $product = new Product(
+                    $row['PlayboxProductID'],
+                    $row['PlayboxProductCode'],
+                    $row['PlayboxProductName'],
+                    $row['PlayboxDescription'],
+                    $row['PlayboxModel'],
+                    $row['PlayboxCategoryID'],
+                    $row['PlayboxWholesalePrice'],
+                    $row['PlayboxListPrice'],
+                    $row['DateCreated'] 
+                ); 
+               array_push($products, $product);
+           }
+           $db->close();
+           return $products;
+       } else {
+           $db->close();
+           return NULL;
+       }
+   }
 
 }
 ?>

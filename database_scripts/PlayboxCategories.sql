@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql1.njit.edu
--- Generation Time: Apr 03, 2025 at 10:44 PM
+-- Generation Time: Apr 05, 2025 at 03:33 AM
 -- Server version: 8.0.17
 -- PHP Version: 7.4.8
 
@@ -43,7 +43,8 @@ INSERT INTO `PlayboxCategories` (`PlayboxCategoryID`, `PlayboxCategoryCode`, `Pl
 (200, 'RCC', 'Remote Control Car', 2, '2025-03-30 01:27:48'),
 (300, 'DOLL', 'Dollhouse', 3, '2025-03-30 01:27:51'),
 (400, 'LEGO', 'Lego Set', 4, '2025-03-30 01:27:55'),
-(500, 'PUZZ', 'Puzzle', 5, '2025-03-30 01:27:58');
+(500, 'PUZZ', 'Puzzle', 5, '2025-03-30 01:27:58'),
+(600, 'MAZE', 'Maze Puzzle', 6, '2025-04-05 03:13:22');
 
 --
 -- Indexes for dumped tables
