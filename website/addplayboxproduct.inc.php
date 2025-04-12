@@ -1,17 +1,19 @@
 <?php
 //include('playboxproduct.php');
 if (isset($_SESSION['login'])) {
-    $productID = $_POST['productID'];
-    if ((trim($productID) == '') or (!is_numeric($productID))) {
-    echo "<h2>Sorry, you must enter a valid item ID number</h2>\n";
+    $productID = filter_input (INPUT_POST, 'productID', FILTER_VALIDATE_INT);
+    if ((trim($productID) == '') or (!is_int($productID))) {
+    echo "<h2>Sorry, you must enter a valid product ID number</h2>\n";
+    } else if (Product::findProduct($productID)) {
+        echo "<h2>Sorry, A product with the ID #$productID already exists</h2>\n";
     } else {
-        $productCode = $_POST['productCode'];
-        $productName = $_POST['productName'];
-        $description = $_POST['description'];
-        $model = $_POST["model"];
-        $categoryID = $_POST['categoryID'];
-        $wholeSalePrice = $_POST['wholeSalePrice'];
-        $listPrice = $_POST['listPrice'];
+        $productCode = htmlspecialchars ($_POST['productCode']);
+        $productName = htmlspecialchars ($_POST['productName']);
+        $description = htmlspecialchars ($_POST['description']);
+        $model = htmlspecialchars ($_POST["model"]);
+        $categoryID = htmlspecialchars ($_POST['categoryID']);
+        $wholeSalePrice = htmlspecialchars ($_POST['wholeSalePrice']);
+        $listPrice = htmlspecialchars ($_POST['listPrice']);
         $DateCreated = date('Y-m-d H:i:s');
         $product = new Product($productID, $productCode, $productName, $description, $model, $categoryID, $wholeSalePrice, $listPrice, $DateCreated);
         $result = $product->saveProduct();

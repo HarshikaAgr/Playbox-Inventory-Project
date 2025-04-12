@@ -1,9 +1,3 @@
-<?
-/* HARSHIKA AGRAWAL
-28 FEB 2025
-IT202 - 004 */
-?>
-
 <?php
 session_start();
 include("playboxcategory.php");
@@ -11,12 +5,16 @@ include("playboxproduct.php");
 ?>
 <!DOCTYPE html>
 <html>
-<head><title>PlayBox: A Toys and Games Shop</title></head>
+<head>
+    <title>PlayBox: A Toys and Games Shop</title>
+    <link rel="stylesheet" type="text/css" href="ih_styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
 <body>
    <header>
        <?php include("header.inc.php"); ?>
    </header>
-   <section style="height: 425px;">
+   <section style="height: 375px;">
        <nav style="float: left; height: 100%;">
            <?php include("nav.inc.php"); ?>
        </nav>

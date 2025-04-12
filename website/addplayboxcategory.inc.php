@@ -2,12 +2,14 @@
 //include("playboxcategory.php");
 if (isset($_SESSION['login'])) {
   $categoryID = filter_input(INPUT_POST, 'PlayboxCategoryID', FILTER_VALIDATE_INT);
-  if ((trim($categoryID) == '') or (!is_numeric($categoryID))) {
+  if ((trim($categoryID) == '') or (!is_int($categoryID))) {
     echo "<h2>Sorry, you must enter a valid category ID number</h2>\n";
+  } else if (Category::findCategory($categoryID)) {
+    echo "<h2>Sorry, A category with the ID #$categoryID already exists</h2>\n";
   } else {
     $categoryCode = htmlspecialchars($_POST['categoryCode']);
     $categoryName = htmlspecialchars($_POST['categoryName']);
-    $categoryShelfNumber = $_POST['categoryShelfNumber'];
+    $categoryShelfNumber = htmlspecialchars ($_POST['categoryShelfNumber']);
     $DateCreated = date("Y-m-d H:i:s");
     $category = new Category($categoryID, $categoryCode, $categoryName, $categoryShelfNumber, $DateCreated);
     $result = $category->saveCategory();
