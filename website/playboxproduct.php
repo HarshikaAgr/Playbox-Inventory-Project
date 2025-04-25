@@ -187,6 +187,38 @@ class Product
            return NULL;
        }
    }
-
+   static function getTotalProducts(){
+    $db = getDB();
+    $query = "SELECT count(PlayboxProductID) FROM PlayboxProducts";
+    $result = $db->query($query);
+    $row = $result->fetch_array();
+    if ($row) {
+        return $row[0];
+    } else {
+        return NULL;
+    }
+    }
+    static function getTotalListPrice(){
+        $db = getDB();
+        $query = "SELECT sum(PlayboxListPrice) FROM PlayboxProducts";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        } else {
+            return NULL;
+        }
+    }
+    static function getTotalWholesalePrice(){
+        $db = getDB();
+        $query = "SELECT sum(PlayboxWholesalePrice) FROM PlayboxProducts";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        } else {
+            return NULL;
+        }
+    }
 }
 ?>

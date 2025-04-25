@@ -1,39 +1,47 @@
 <?php
-//include('playboxproduct.php');
+require_once('playboxproduct.php');
 if (isset($_SESSION['login'])) {
    $productID = $_POST['productID'];
    $answer = $_POST['answer'];
    if ($answer == "Update product") {
 //    $productID = $_POST['productID'];
       $product = Product::findProduct($productID);
-      $product->productID = $_POST['productID'];
-      $product->productName = $_POST['productName'];
-      $product->productCode = $_POST['productCode'];
-      $product->description = $description = $_POST['description'];
-      $product->model = $_POST['model'];
-      $product->categoryID = $_POST['categoryID'];
-      $product->wholeSalePrice = $_POST['wholeSalePrice'];
-      $product->listPrice = $_POST['listPrice'];
-      $DateCreated = date('Y-m-d H:i:s');
-      if (!(Category::findCategory($product->categoryID))) {
-         echo "<h2>Sorry, you must enter a valid category ID number</h2>\n";
+      if ($product) {
+         $product->productID = $_POST['productID'];
+         $product->productName = $_POST['productName'];
+         $product->productCode = $_POST['productCode'];
+         $product->description = $_POST['description'];
+         $product->model = $_POST['model'];
+         $product->categoryID = $_POST['categoryID'];
+         $product->wholeSalePrice = $_POST['wholeSalePrice'];
+         $product->listPrice = $_POST['listPrice'];
+         $product->DateCreated = date('Y-m-d H:i:s');
+
+         if (!(Category::findCategory($product->categoryID))) {
+            echo "<h2>Sorry, you must enter a valid category ID number</h2>\n";
+         }
+         else if (!(is_numeric($product->wholeSalePrice))) {
+            echo "<h2>Sorry, you must enter a valid wholeSale price</h2>\n";
+         }
+         else if (!(is_numeric($product->listPrice))) {
+            echo "<h2>Sorry, you must enter a valid list price</h2>\n";
+         }
+         else {
+            $result = $product->updateProduct();
+            if ($result) {
+               echo "<h2>Product $productID updated successfully</h2>\n";
+            } else {
+               echo "<h2>Problem updating product $productID</h2>\n";
+            }
+         }
+      } else {
+         echo "<h2>Product $productID not found</h2>\n";
       }
-      else if (!(is_numeric($product->wholeSalePrice))) {
-         echo "<h2>Sorry, you must enter a valid wholesale price</h2>\n";
-      }
-      else if (!(is_numeric($product->listPrice))) {
-         echo "<h2>Sorry, you must enter a valid list price</h2>\n";
-      }
-      else{
-         $result = $product->updateProduct();
-         echo "<h2>Product $productID updated</h2>\n";
-      } 
-   }
-   else {
-      echo "<h2>Update Canceled for product $productID</h2>\n";
+   } else {
+      echo "<h2>Update canceled for product $productID</h2>\n";
    }
 } else {
-echo "<h2>Please login first</h2>\n";
+   echo "<h2>Please log in first</h2>\n";
 }
 ?>
 
