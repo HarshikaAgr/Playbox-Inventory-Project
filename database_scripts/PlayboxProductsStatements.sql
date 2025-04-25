@@ -42,6 +42,6 @@ VALUES
 
 INSERT INTO PlayboxProducts (PlayboxProductID, PlayboxProductCode, PlayboxProductName, PlayboxDescription, PlayboxModel, PlayboxCategoryID, PlayboxWholesalePrice, PlayboxListPrice, DateCreated)
 VALUES
-    (501, 'RUBIK', 'Rubik’s Cube', 'This 3x3 Rubik’s Cube is a classic puzzle. It has smooth rotation and vibrant colors, perfect for puzzle lovers.', 'Speed 3x3 Cube', 500, 6.00, 12.99, NOW()),
+    (501, 'RUBIK', 'Rubik''s Cube', 'This 3x3 Rubik’s Cube is a classic puzzle. It has smooth rotation and vibrant colors, perfect for puzzle lovers.', 'Speed 3x3 Cube', 500, 6.00, 12.99, NOW()),
     (502, 'RAVENS', 'Ravensburger 1000-Piece Puzzle', 'This Ravensburger 1000-piece puzzle features beautiful imagery. It Is a challenging puzzle for all skill levels.', '1000-Piece Puzzle', 500, 10.00, 19.99, NOW()),
     (503, '3DPUZ', '3D Puzzle - Eiffel Tower', 'Build a detailed 3D replica of the Eiffel Tower with this challenging puzzle. It is perfect for collectors and puzzle fans.', 'Eiffel Tower 3D', 500, 15.00, 25.99, NOW());
